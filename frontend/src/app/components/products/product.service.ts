@@ -24,11 +24,14 @@ export class ProductService {
         duration: 3000,
         verticalPosition: 'top',
         horizontalPosition: 'right'
-
     });
   }
 
   create(product: Product): Observable<Product>{
     return this.http.post<Product>(this.baseUrl, product);
+  }
+
+  read(): Observable<Product[]>{
+    return this.http.get<Product[]>(this.baseUrl)
   }
 }

@@ -11,13 +11,14 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatToolbarModule } from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 
 import { HomeComponent } from './views/home/home.component';
@@ -25,6 +26,12 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 import { ProductCreateComponent } from './components/products/product-create/product-create.component';
+import { FormsModule } from '@angular/forms';
+import { ProductReadComponent } from './components/products/product-read/product-read.component';
+import { ProductRead2Component } from './components/products/product-read2/product-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -39,8 +46,7 @@ import { ProductCreateComponent } from './components/products/product-create/pro
     ProductCrudComponent,
     RedDirective,
     ForDirective,    
-    ProductCreateComponent,
-
+    ProductCreateComponent, ProductReadComponent, ProductRead2Component
   ],
   imports: [
     BrowserModule,
@@ -52,7 +58,13 @@ import { ProductCreateComponent } from './components/products/product-create/pro
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
